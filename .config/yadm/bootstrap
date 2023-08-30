@@ -1,0 +1,23 @@
+function _green {
+  printf "\e[32m$@\e[0m"
+}
+function _yellow {
+  printf "\e[33m$@\e[0m"
+}
+function _blue {
+  printf "\e[34m$@\e[0m"
+}
+
+termux-setup-storage
+
+echo "Installing antibody plugins"
+antibody bundle < ~/.config/zsh/lib/plugins_list.txt > ~/.config/zsh/lib/plugins.zsh
+
+
+yes | apt install git gh termux-api ripgrep yadm zsh fzf fd
+
+git config --global user.name "thearticulate-edboard"
+git config --global user.email "articulate58@gmail.com"
+git config --global init.defaultBranch main
+git config --global pull.rebase true
+chsh -s zsh
