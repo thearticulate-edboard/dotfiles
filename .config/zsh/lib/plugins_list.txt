@@ -1,17 +1,10 @@
 zsh-users/zsh-history-substring-search
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
-michaelxmcbride/zsh-dircycle
-#rupa/z
-agkozak/zsh-z
 zdharma/fast-syntax-highlighting
 # Tab press will give you fzf list of files
 changyuheng/zsh-interactive-cd
 # Async is required for pure
 mafredri/zsh-async
-# Open all lines in current dir as fzf menu
-seletskiy/zsh-fuzzy-search-and-edit
-# Spaceship is slow in termux
 sindresorhus/pure
-# Fzf + git: Comes with aliases
-# wfxr/forgit
+
