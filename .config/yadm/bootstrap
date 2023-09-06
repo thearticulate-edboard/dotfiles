@@ -1,28 +1,15 @@
 #!/usr/bin/env zsh
 
-function _green {
-  printf "\e[32m$@\e[0m"
-}
-function _yellow {
-  printf "\e[33m$@\e[0m"
-}
-function _blue {
-  printf "\e[34m$@\e[0m"
-}
-
-termux-setup-storage
-
-yes | apt upgrade
-yes | apt install git gh termux-api ripgrep yadm zsh fzf fd
 
 echo "Installing antibody plugins"
 antibody bundle < ~/.config/zsh/lib/plugins_list.txt > ~/.config/zsh/lib/plugins.zsh
 
-_blue "Setting up git"
+echo "Setting up git"
 git config --global user.name "thearticulate-edboard"
 git config --global user.email "articulate58@gmail.com"
 git config --global init.defaultBranch main
 git config --global pull.rebase true
 git config --global --add safe.directory /storage/emulated/0/Documents/testing
+echo "git setup finished"
 
 chsh -s zsh

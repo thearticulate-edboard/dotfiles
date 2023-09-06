@@ -1,5 +1,5 @@
 
 cd ~/storage/shared/Documents/testing
 git add .
-git commit -m "$(date)"
+git commit -m "Update from termux"
 git push origin master

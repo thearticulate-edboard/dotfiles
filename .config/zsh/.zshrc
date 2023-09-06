@@ -1,11 +1,6 @@
-# Move compinit out of Home
-autoload -Uz compinit
-compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
-# Ensure path arrays do not contain duplicates.
-typeset -gU cdpath fpath mailpath path
+
 
 export HIST_STAMPS="dd/mm/yyyy"
-export HISTIGNORE=?:pwd:mail:id:uptime:resize:ls:clear:history:cd:exit:*--help:?
 export HISTCONTROL=ignoredups
 
 export PAGER='less'
@@ -14,9 +9,6 @@ export LESS='-F -g -i -M -R -S -w -X -z-4'
 export ALTERNATE_EDITOR=""
 export EDITOR="nano"
 export ZSHZ_DATA="${HOME}/.cache/zsh_z/zdata"
-
-
-
 
 path=(
     $HOME/.local/bin
@@ -63,19 +55,3 @@ zmodload zsh/terminfo
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# Ctrl-X-E to Edit command in Vim
-autoload -z edit-command-line
-zle -N edit-command-line
-bindkey "^X^E" edit-command-line
-bindkey '^p' fzf-file-widget
-bindkey '^H' fzf-history-widget
-# Alt+C will show a list of subfolders
-# bindkey '\ec' fzf-cd-widget
-bindkey '^k' fzf-cd-widget
-
-# Bind Ctrl + Shift + Left key combination to backwards direction.
-bindkey "\e[1;6D" _dircycle_insert_cycled_left
-
-# Bind Ctrl + Shift + Right key combination to forwards direction.
-bindkey "\e[1;6C" _dircycle_insert_cycled_right
-# vi: ft=sh
