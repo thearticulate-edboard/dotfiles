@@ -10,9 +10,7 @@ export ALTERNATE_EDITOR=""
 export EDITOR="nano"
 export ZSHZ_DATA="${HOME}/.cache/zsh_z/zdata"
 
-path=(
-    $HOME/.local/bin
-)
+
 
 HISTFILE=${HOME}/.config/zsh/lib/history.txt
 HISTSIZE=50000
