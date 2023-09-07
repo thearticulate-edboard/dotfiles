@@ -1,1 +1,1 @@
-yadm fetch
+yadm pull --rebase

@@ -1,15 +1,28 @@
 #!/usr/bin/env zsh
 
+PS3="Enter a number: "
+select user in Astha Akanksha R
+do
+    echo "You Selected the user: $user" && break
+done
+
+echo "USER=${user}" >> ~/env-vars
 
 echo "Installing antibody plugins"
+echo ""
 antibody bundle < ~/.config/zsh/lib/plugins_list.txt > ~/.config/zsh/lib/plugins.zsh
 
 echo "Setting up git"
+echo ""
+echo ""
 git config --global user.name "thearticulate-edboard"
 git config --global user.email "articulate58@gmail.com"
 git config --global init.defaultBranch main
 git config --global pull.rebase true
 git config --global --add safe.directory /storage/emulated/0/Documents/testing
 echo "git setup finished"
-
+echo ""
+echo ""
 chsh -s zsh
+
+
