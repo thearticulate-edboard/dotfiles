@@ -3,10 +3,19 @@
 PS3="Enter a number: "
 select user in Astha Akanksha R
 do
-    echo "You Selected the user: $user" && break
+    if [[ $user == "Akanksha" ]]                                                                                                                    
+	then
+		user="Mini"
+	else 
+		
+	fi
+	sleep 1 && break
 done
 
 echo "USER=${user}" >> ~/env-vars
+
+echo "Hi ${user}, setup will begin in a moment"
+sleep 2
 
 echo "Installing antibody plugins"
 echo ""
