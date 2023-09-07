@@ -16,7 +16,7 @@ echo "USER=${user} :)" >> ~/env-vars
 
 clear
 echo ""
-printf "%40s\n" "Hello \033[1;34m${user}\033[0m :), setup will begin in a moment"
+echo -e "Hello \e[34m${user}\e[39m :), setup will begin in a moment"
 echo "Hello \033[1;34m${user}\033[0m :)" > /data/data/com.termux/files/usr/etc/motd
 ~/scripts/spinner.sh sleep 5
 

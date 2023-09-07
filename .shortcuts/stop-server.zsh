@@ -1,1 +1,1 @@
-pkill hugo
+pkill hugo && termux-toast "Stopped server" || termux-toast "Failed to stop server"
