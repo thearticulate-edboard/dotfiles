@@ -1,4 +1,6 @@
 #!/usr/bin/env zsh
+blue=$(tput setaf 4)
+normal=$(tput sgr0)
 
 PS3="Enter a number: "
 select user in Astha Akanksha R
@@ -12,9 +14,11 @@ do
 	sleep 1 && break
 done
 
-echo "USER=${user}" >> ~/env-vars
+echo "USER=${user} :)" >> ~/env-vars
 
-echo "Hello ${user}, setup will begin in a moment"
+clear
+echo ""
+printf "%40s\n" "Hello ${blue}${user}${normal}, setup will begin in a moment"
 echo "Hello ${user}" > /data/data/com.termux/files/usr/etc/motd
 ~/scripts/spinner.sh sleep 5
 
