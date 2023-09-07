@@ -22,6 +22,7 @@ alias reload='source $ZDOTDIR/.zshrc'
 alias cx="chmod +x"
 
 alias td="cd ~/storage/shared/Documents/testing"
+alias ts="cd ~/.shortcuts"
 
 
 
