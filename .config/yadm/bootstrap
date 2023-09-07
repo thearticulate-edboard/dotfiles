@@ -19,7 +19,7 @@ echo "USER=${user} :)" >> ~/env-vars
 clear
 echo ""
 printf "%40s\n" "Hello ${blue}${user}${normal}, setup will begin in a moment"
-echo "Hello ${user}" > /data/data/com.termux/files/usr/etc/motd
+echo "Hello \033[1;34m${user}\033[0m" > /data/data/com.termux/files/usr/etc/motd
 ~/scripts/spinner.sh sleep 5
 
 echo "Installing antibody plugins"
